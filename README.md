@@ -79,6 +79,16 @@ dotnet run
 
 ### EventStatisticsViewModel
 
+## Utilisation
+
+Créer votre utilisateur pour pouvoir participer à un événement.
+
+Vous pouvez modifier et supprimer des utilisateurs.
+
+Vous pouvez créer, modifier et supprimer des événements sans avoir besoin de créer un utilisateur.
+
+Vous pouvez voir le nombre de participants pour chaque événement.
+
 ## Lien GitHub
 
 [ECF2 sur GitHub](https://github.com/Gaetanerk/ECF2.git)
