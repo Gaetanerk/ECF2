@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ECF2.Models.EventStatisticsViewModel>
+
+@{
+    ViewData["Title"] = "Statistiques des événements";
+}
+
+<h1>Statistiques des événements</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom de l'événement</th>
+            <th>Lieu</th>
+            <th>Date</th>
+            <th>Nombre de participants</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Event.Name</td>
+                <td>@item.Event.Location</td>
+                <td>@item.Event.Date</td>
+                <td>@item.ParticipantCount</td>
+            </tr>
+        }
+    </tbody>
+</table>

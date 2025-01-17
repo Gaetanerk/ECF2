@@ -1,0 +1,34 @@
+﻿@model ECF2.Models.UserEvent
+
+@{
+    ViewData["Title"] = "Je participe";
+}
+
+<h1>Participer à un événement</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Participate" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EventId" value="@ViewBag.EventId" />
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label">Utilisateur</label>
+                <select asp-for="UserId" class="form-control" asp-items="ViewBag.Users"></select>
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Participer" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Retour aux événements</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
